@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webbutik</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    
+    <div class="bg-warning text-white text-center py-2 fixed-top">
+        Free delivery over $49!
+    </div>
+
+
+    <div class="container text-center mt-5">
+        <div class="row">
+            <div class=" col-md-4 col-sm-6 col-xs-5 navbar-logo clearfix">
+                <img id="HemIconen" src="shop.png" class="img-fluid btn w-50 p-3" alt="shopping">
+            </div>
+
+            <div class="col d-flex justify-content-end align-items-end position-relative">
+
+                <div class="me-5">
+                    <i class="btn btn-light bi bi-search"></i> Sök
+                </div>
+                
+                <div class="position-relative d-inline-block">
+
+                    <i class="btn btn-light bi bi-cart3 fs-3" data-bs-toggle="offcanvas" data-bs-target="#sideBar"></i>
+                        
+                    <span id="cart-badge" class="cart-badge badge bg-warning">0</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end " tabindex="-1" id="sideBar" aria-labelledby="aria-label">
+
+        <div class="offcanvas-header">
+
+            <h5 id="aria-label">Din kundvagn</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+        </div>
+
+        <div class="offcanvas-body">
+
+            <p>Här visas dina produkter.</p>
+            <div id="lista"></div>
+            <p id="pris" class="fw-bold text-end mt-3">Total: 0 $</p>
+            <button type="submit" id="OrderBtn" class="btn btn-dark w-100 mt-4" onclick="beställ()">Till
+                beställning</button>
+            <button class="btn btn-warning w-100 mt-5" onclick="tömKundvagn()">
+                <i class="bi bi-trash"></i> Töm kundvagnen
+            </button>
+
+        </div>
+    </div>
+
+    <hr class="text-center mx-auto mt-3">
+
+
+    <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 bg-dark py-2 mt-3 text-center">
+
+            <div class="col"><button class="btn btn-light w-100 m-1 filter-btn"
+                    data-category="men's clothing">Herrkläder</button>
+            </div>
+
+            <div class="col"><button class="btn btn-light w-100 m-1 filter-btn"
+                    data-category="women's clothing">Damkläder</button>
+            </div>
+
+            <div class="col"><button class="btn btn-light w-100 m-1 filter-btn"
+                    data-category="jewelery">Smycken</button>
+            </div>
+
+            <div class="col"><button class="btn btn-light w-100 m-1 filter-btn"
+                    data-category="electronics">Elektronik</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="products" class="container-sm text-center mx-auto p-3 my-5"></div>
+
+
+    <div class="contact-section text-center mb-5">
+        <div class="container">
+            
+            <h2>KUNDTJÄNST</h2>
+            
+            <div class="row">
+                
+                <div class="col-md-6 contact-info">
+                    <h5>Email</h5>
+                    <p>info@info.com</p>
+                </div>
+                
+                <div class="col-md-6 contact-info">
+                    <h5>Telefon</h5>
+                    <p>+46 123 000 777</p>
+                </div>
+                
+                <div class="col-md-12 contact-info">
+                    <h5>Adress</h5>
+                    <p>vägen 123, 123 45 Stad</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
